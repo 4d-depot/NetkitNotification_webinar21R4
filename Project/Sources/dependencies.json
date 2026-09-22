@@ -1,0 +1,17 @@
+{
+	"version": 2130,
+	"dependencies": {
+		"4D NetKit": {
+			"github": "4d/4D-NetKit",
+			"version": "4d"
+		},
+		"4D ViewPro": {
+			"github": "4d/4D-ViewPro",
+			"version": "4d"
+		},
+		"DateTimeComponent 4D": {
+			"github": "4d-depot/DateTimeComponent-4D",
+			"version": "latest"
+		}
+	}
+}

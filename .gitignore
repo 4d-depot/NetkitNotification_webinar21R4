@@ -1,0 +1,13 @@
+# No user preferences
+userPreferences.*/
+
+# No Trash
+project/Trash/*
+
+# No deriv data
+project/DerivedData/*
+
+# No logs
+logs/*
+
+AIProviders.json

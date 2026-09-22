@@ -1,0 +1,21 @@
+{
+	"Default Folder": {
+		"groups": [
+			"Default Forms",
+			"Default Project Methods",
+			"Default Tables"
+		]
+	},
+	"Default Forms": {},
+	"Default Project Methods": {},
+	"Default Tables": {
+		"tables": [
+			"INFO"
+		],
+		"forms": [
+			"[INFO]Input",
+			"[INFO]Output"
+		]
+	},
+	"trash": {}
+}
