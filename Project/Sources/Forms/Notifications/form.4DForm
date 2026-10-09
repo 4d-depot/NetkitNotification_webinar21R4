@@ -24,7 +24,7 @@
 					"text": "Tab control",
 					"top": 1,
 					"left": 7,
-					"width": 1116,
+					"width": 1142,
 					"height": 714,
 					"dataSource": "_TabTitles",
 					"dataSourceTypeHint": "object",
@@ -172,9 +172,9 @@
 			"objects": {
 				"ViewProArea": {
 					"type": "view",
-					"left": 21,
+					"left": 17,
 					"top": 106,
-					"width": 1080,
+					"width": 1120,
 					"height": 555,
 					"userInterface": "none",
 					"withFormulaBar": false,
@@ -187,7 +187,7 @@
 			}
 		}
 	],
-	"geometryStamp": 62,
+	"geometryStamp": 80,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

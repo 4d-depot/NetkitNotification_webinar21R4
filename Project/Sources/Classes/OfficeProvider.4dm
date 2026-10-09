@@ -13,8 +13,10 @@ singleton Class constructor($token : Object)
 	// Build the OAuth2 configuration object
 	// Object to hold OAuth2 credentials configuration
 	var $credential:={}
-	$credential.name:="Microsoft"  // Provider name
-	$credential.permission:="signedIn"  // Requested permission level
+	// Provider name
+	$credential.name:="Microsoft"
+	// Requested permission level
+	$credential.permission:="signedIn"
 	
 	// OAuth2 client configuration
 	$credential.clientId:=$myCredentials.ClientID
@@ -59,10 +61,10 @@ Function getToken() : Object
 	// Return the full token object
 	return $token
 	
-// Retrieves Outlook categories and assigns display colors to them.
+	// Retrieves Outlook categories and assigns display colors to them.
 	// Algorithm: Fetches category list from Office365, maps each preset color code to RGB hex values.
 	// Returns enriched collection with backgroundColor and textColor properties added to each category.
-	Function categoryColor() : Collection
+Function categoryColor() : Collection
 	
 	// Fetch all available Outlook categories for the authenticated user
 	var $categories:=cs:C1710.NetKit.Office365.new(This:C1470.OAuth2).category.list().categories

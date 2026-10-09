@@ -15,7 +15,7 @@ Class constructor($office365 : cs:C1710.NetKit.Office365)
 	// Algorithm: Fetches new events from Office365 API and syncs them to the calendar view.
 	// Iterates through event IDs, retrieves full event data with timezone conversion, 
 	// filters null results, and batch-renders all events in single display call.
-	Function onCreate($provider : Object; $event : Object)
+Function onCreate($provider : Object; $event : Object)
 	var $id : Text
 	var $item : Object
 	var $calendar:=cs:C1710.CalendarDisplay.new()
@@ -31,7 +31,7 @@ Class constructor($office365 : cs:C1710.NetKit.Office365)
 		If ($myEvent#Null:C1517)
 			$events.push($myEvent)
 		End if 
-		End for each 
+	End for each 
 	
 	// Render all fetched events in single calendar update
 	If ($events.length>0)
@@ -40,20 +40,21 @@ Class constructor($office365 : cs:C1710.NetKit.Office365)
 	
 	// Removes calendar events reported as deleted.
 	// Algorithm: Iterates through deleted event IDs and removes corresponding shapes from calendar grid.
-	Function onDelete($provider : Object; $event : Object)
+Function onDelete($provider : Object; $event : Object)
 	var $id : Text
 	var $calendar:=cs:C1710.CalendarDisplay.new()
 	
 	// Remove all events reported as deleted from the display
 	For each ($id; $event.ids)
 		// Remove the shape/rendering for this event ID
+		$calendar.removeEvent($id)
 	End for each 
 	
 	
 	// Retrieves and updates calendar events reported as modified.
 	// Algorithm: Fetches updated event details and refreshes calendar display.
 	// Requests full event data with timezone conversion and updates shape if event found.
-	Function onModify($provider : Object; $event : Object)
+Function onModify($provider : Object; $event : Object)
 	var $item : Object
 	var $id : Text
 	var $calendar:=cs:C1710.CalendarDisplay.new()
